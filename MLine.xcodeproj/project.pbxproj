@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C8A54951DB2CE8100A795FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8A54941DB2CE8100A795FB /* AppDelegate.swift */; };
+		1C8A54971DB2CE8100A795FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8A54961DB2CE8100A795FB /* ViewController.swift */; };
+		1C8A549A1DB2CE8100A795FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8A54981DB2CE8100A795FB /* Main.storyboard */; };
+		1C8A549C1DB2CE8100A795FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8A549B1DB2CE8100A795FB /* Assets.xcassets */; };
+		1C8A549F1DB2CE8100A795FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8A549D1DB2CE8100A795FB /* LaunchScreen.storyboard */; };
+		1C8A54AA1DB2CE8100A795FB /* MLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8A54A91DB2CE8100A795FB /* MLineTests.swift */; };
+		1C8A54B51DB2CE8100A795FB /* MLineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8A54B41DB2CE8100A795FB /* MLineUITests.swift */; };
+		1C8A54BA1DB2CE8100A795FB /* MLine WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1C8A54B91DB2CE8100A795FB /* MLine WatchKit App.app */; };
+		1C8A54C91DB2CE8100A795FB /* MLine WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1C8A54C81DB2CE8100A795FB /* MLine WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1C99AE041DB2CF2B0021F52C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C99AE031DB2CF2B0021F52C /* MapKit.framework */; };
+		1CD436691EE4AAA50040B50E /* Trolley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD436681EE4AAA50040B50E /* Trolley.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C8A54A61DB2CE8100A795FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C8A54891DB2CE8000A795FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C8A54901DB2CE8000A795FB;
+			remoteInfo = MLine;
+		};
+		1C8A54B11DB2CE8100A795FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C8A54891DB2CE8000A795FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C8A54901DB2CE8000A795FB;
+			remoteInfo = MLine;
+		};
+		1C8A54CA1DB2CE8100A795FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C8A54891DB2CE8000A795FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C8A54C71DB2CE8100A795FB;
+			remoteInfo = "MLine WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1C8A54DF1DB2CE8100A795FB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1C8A54C91DB2CE8100A795FB /* MLine WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54E31DB2CE8100A795FB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1C8A54BA1DB2CE8100A795FB /* MLine WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1C8A54911DB2CE8000A795FB /* MLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8A54941DB2CE8100A795FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1C8A54961DB2CE8100A795FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C8A54991DB2CE8100A795FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1C8A549B1DB2CE8100A795FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C8A549E1DB2CE8100A795FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1C8A54A01DB2CE8100A795FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C8A54A51DB2CE8100A795FB /* MLineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8A54A91DB2CE8100A795FB /* MLineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLineTests.swift; sourceTree = "<group>"; };
+		1C8A54AB1DB2CE8100A795FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C8A54B01DB2CE8100A795FB /* MLineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8A54B41DB2CE8100A795FB /* MLineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLineUITests.swift; sourceTree = "<group>"; };
+		1C8A54B61DB2CE8100A795FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C8A54B91DB2CE8100A795FB /* MLine WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLine WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8A54C81DB2CE8100A795FB /* MLine WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MLine WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C99AE031DB2CF2B0021F52C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1CD436681EE4AAA50040B50E /* Trolley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trolley.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C8A548E1DB2CE8000A795FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C99AE041DB2CF2B0021F52C /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54A21DB2CE8100A795FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54AD1DB2CE8100A795FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54C51DB2CE8100A795FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C8A54881DB2CE8000A795FB = {
+			isa = PBXGroup;
+			children = (
+				1C8A54931DB2CE8000A795FB /* MLine */,
+				1C8A54A81DB2CE8100A795FB /* MLineTests */,
+				1C8A54B31DB2CE8100A795FB /* MLineUITests */,
+				1C8A54921DB2CE8000A795FB /* Products */,
+				1C99AE021DB2CF2B0021F52C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1C8A54921DB2CE8000A795FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C8A54911DB2CE8000A795FB /* MLine.app */,
+				1C8A54A51DB2CE8100A795FB /* MLineTests.xctest */,
+				1C8A54B01DB2CE8100A795FB /* MLineUITests.xctest */,
+				1C8A54B91DB2CE8100A795FB /* MLine WatchKit App.app */,
+				1C8A54C81DB2CE8100A795FB /* MLine WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C8A54931DB2CE8000A795FB /* MLine */ = {
+			isa = PBXGroup;
+			children = (
+				1CD436671EE4AA940040B50E /* Model */,
+				1C8A54941DB2CE8100A795FB /* AppDelegate.swift */,
+				1C8A54961DB2CE8100A795FB /* ViewController.swift */,
+				1C8A54981DB2CE8100A795FB /* Main.storyboard */,
+				1C8A549B1DB2CE8100A795FB /* Assets.xcassets */,
+				1C8A549D1DB2CE8100A795FB /* LaunchScreen.storyboard */,
+				1C8A54A01DB2CE8100A795FB /* Info.plist */,
+			);
+			path = MLine;
+			sourceTree = "<group>";
+		};
+		1C8A54A81DB2CE8100A795FB /* MLineTests */ = {
+			isa = PBXGroup;
+			children = (
+				1C8A54A91DB2CE8100A795FB /* MLineTests.swift */,
+				1C8A54AB1DB2CE8100A795FB /* Info.plist */,
+			);
+			path = MLineTests;
+			sourceTree = "<group>";
+		};
+		1C8A54B31DB2CE8100A795FB /* MLineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1C8A54B41DB2CE8100A795FB /* MLineUITests.swift */,
+				1C8A54B61DB2CE8100A795FB /* Info.plist */,
+			);
+			path = MLineUITests;
+			sourceTree = "<group>";
+		};
+		1C99AE021DB2CF2B0021F52C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C99AE031DB2CF2B0021F52C /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CD436671EE4AA940040B50E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CD436681EE4AAA50040B50E /* Trolley.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C8A54901DB2CE8000A795FB /* MLine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C8A54E41DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLine" */;
+			buildPhases = (
+				1C8A548D1DB2CE8000A795FB /* Sources */,
+				1C8A548E1DB2CE8000A795FB /* Frameworks */,
+				1C8A548F1DB2CE8000A795FB /* Resources */,
+				1C8A54E31DB2CE8100A795FB /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MLine;
+			productName = MLine;
+			productReference = 1C8A54911DB2CE8000A795FB /* MLine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C8A54A41DB2CE8100A795FB /* MLineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C8A54E71DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLineTests" */;
+			buildPhases = (
+				1C8A54A11DB2CE8100A795FB /* Sources */,
+				1C8A54A21DB2CE8100A795FB /* Frameworks */,
+				1C8A54A31DB2CE8100A795FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C8A54A71DB2CE8100A795FB /* PBXTargetDependency */,
+			);
+			name = MLineTests;
+			productName = MLineTests;
+			productReference = 1C8A54A51DB2CE8100A795FB /* MLineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1C8A54AF1DB2CE8100A795FB /* MLineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C8A54EA1DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLineUITests" */;
+			buildPhases = (
+				1C8A54AC1DB2CE8100A795FB /* Sources */,
+				1C8A54AD1DB2CE8100A795FB /* Frameworks */,
+				1C8A54AE1DB2CE8100A795FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C8A54B21DB2CE8100A795FB /* PBXTargetDependency */,
+			);
+			name = MLineUITests;
+			productName = MLineUITests;
+			productReference = 1C8A54B01DB2CE8100A795FB /* MLineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1C8A54B81DB2CE8100A795FB /* MLine WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C8A54E01DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLine WatchKit App" */;
+			buildPhases = (
+				1C8A54B71DB2CE8100A795FB /* Resources */,
+				1C8A54DF1DB2CE8100A795FB /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C8A54CB1DB2CE8100A795FB /* PBXTargetDependency */,
+			);
+			name = "MLine WatchKit App";
+			productName = "MLine WatchKit App";
+			productReference = 1C8A54B91DB2CE8100A795FB /* MLine WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1C8A54C71DB2CE8100A795FB /* MLine WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C8A54DC1DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLine WatchKit Extension" */;
+			buildPhases = (
+				1C8A54C41DB2CE8100A795FB /* Sources */,
+				1C8A54C51DB2CE8100A795FB /* Frameworks */,
+				1C8A54C61DB2CE8100A795FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MLine WatchKit Extension";
+			productName = "MLine WatchKit Extension";
+			productReference = 1C8A54C81DB2CE8100A795FB /* MLine WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C8A54891DB2CE8000A795FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Jonathan Tran";
+				TargetAttributes = {
+					1C8A54901DB2CE8000A795FB = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					1C8A54A41DB2CE8100A795FB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8C3MVD52P3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1C8A54901DB2CE8000A795FB;
+					};
+					1C8A54AF1DB2CE8100A795FB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8C3MVD52P3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1C8A54901DB2CE8000A795FB;
+					};
+					1C8A54B81DB2CE8100A795FB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8C3MVD52P3;
+						ProvisioningStyle = Automatic;
+					};
+					1C8A54C71DB2CE8100A795FB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8C3MVD52P3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1C8A548C1DB2CE8000A795FB /* Build configuration list for PBXProject "MLine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1C8A54881DB2CE8000A795FB;
+			productRefGroup = 1C8A54921DB2CE8000A795FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C8A54901DB2CE8000A795FB /* MLine */,
+				1C8A54A41DB2CE8100A795FB /* MLineTests */,
+				1C8A54AF1DB2CE8100A795FB /* MLineUITests */,
+				1C8A54B81DB2CE8100A795FB /* MLine WatchKit App */,
+				1C8A54C71DB2CE8100A795FB /* MLine WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C8A548F1DB2CE8000A795FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C8A549F1DB2CE8100A795FB /* LaunchScreen.storyboard in Resources */,
+				1C8A549C1DB2CE8100A795FB /* Assets.xcassets in Resources */,
+				1C8A549A1DB2CE8100A795FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54A31DB2CE8100A795FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54AE1DB2CE8100A795FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54B71DB2CE8100A795FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54C61DB2CE8100A795FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C8A548D1DB2CE8000A795FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C8A54971DB2CE8100A795FB /* ViewController.swift in Sources */,
+				1CD436691EE4AAA50040B50E /* Trolley.swift in Sources */,
+				1C8A54951DB2CE8100A795FB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54A11DB2CE8100A795FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C8A54AA1DB2CE8100A795FB /* MLineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54AC1DB2CE8100A795FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C8A54B51DB2CE8100A795FB /* MLineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C8A54C41DB2CE8100A795FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C8A54A71DB2CE8100A795FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C8A54901DB2CE8000A795FB /* MLine */;
+			targetProxy = 1C8A54A61DB2CE8100A795FB /* PBXContainerItemProxy */;
+		};
+		1C8A54B21DB2CE8100A795FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C8A54901DB2CE8000A795FB /* MLine */;
+			targetProxy = 1C8A54B11DB2CE8100A795FB /* PBXContainerItemProxy */;
+		};
+		1C8A54CB1DB2CE8100A795FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C8A54C71DB2CE8100A795FB /* MLine WatchKit Extension */;
+			targetProxy = 1C8A54CA1DB2CE8100A795FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1C8A54981DB2CE8100A795FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C8A54991DB2CE8100A795FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1C8A549D1DB2CE8100A795FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C8A549E1DB2CE8100A795FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C8A54DA1DB2CE8100A795FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1C8A54DB1DB2CE8100A795FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1C8A54DD1DB2CE8100A795FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 8C3MVD52P3;
+				INFOPLIST_FILE = "MLine WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLine.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		1C8A54DE1DB2CE8100A795FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 8C3MVD52P3;
+				INFOPLIST_FILE = "MLine WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLine.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		1C8A54E11DB2CE8100A795FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8C3MVD52P3;
+				IBSC_MODULE = MLine_WatchKit_Extension;
+				INFOPLIST_FILE = "MLine WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLine.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		1C8A54E21DB2CE8100A795FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8C3MVD52P3;
+				IBSC_MODULE = MLine_WatchKit_Extension;
+				INFOPLIST_FILE = "MLine WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLine.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		1C8A54E51DB2CE8100A795FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MLine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		1C8A54E61DB2CE8100A795FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = MLine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		1C8A54E81DB2CE8100A795FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8C3MVD52P3;
+				INFOPLIST_FILE = MLineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLine.app/MLine";
+			};
+			name = Debug;
+		};
+		1C8A54E91DB2CE8100A795FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8C3MVD52P3;
+				INFOPLIST_FILE = MLineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLine.app/MLine";
+			};
+			name = Release;
+		};
+		1C8A54EB1DB2CE8100A795FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8C3MVD52P3;
+				INFOPLIST_FILE = MLineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MLine;
+			};
+			name = Debug;
+		};
+		1C8A54EC1DB2CE8100A795FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8C3MVD52P3;
+				INFOPLIST_FILE = MLineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jt.MLineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MLine;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C8A548C1DB2CE8000A795FB /* Build configuration list for PBXProject "MLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C8A54DA1DB2CE8100A795FB /* Debug */,
+				1C8A54DB1DB2CE8100A795FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C8A54DC1DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLine WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C8A54DD1DB2CE8100A795FB /* Debug */,
+				1C8A54DE1DB2CE8100A795FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C8A54E01DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLine WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C8A54E11DB2CE8100A795FB /* Debug */,
+				1C8A54E21DB2CE8100A795FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C8A54E41DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C8A54E51DB2CE8100A795FB /* Debug */,
+				1C8A54E61DB2CE8100A795FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C8A54E71DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C8A54E81DB2CE8100A795FB /* Debug */,
+				1C8A54E91DB2CE8100A795FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C8A54EA1DB2CE8100A795FB /* Build configuration list for PBXNativeTarget "MLineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C8A54EB1DB2CE8100A795FB /* Debug */,
+				1C8A54EC1DB2CE8100A795FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C8A54891DB2CE8000A795FB /* Project object */;
+}

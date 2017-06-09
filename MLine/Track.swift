@@ -11,14 +11,20 @@ import MapKit
 
 class Track
 {
+    //MARK:- Properties
     var trackPoints: [CLLocationCoordinate2D] = [CLLocationCoordinate2D]()
     
     
-    
+    //MARK:- Initialization
     required init(){
         addPoints()
     }
     
+    
+    //MARK:- Methods
+    
+    //Methods for finding a location nearest to the track
+    //Pass in trolley location, find the proper location and pin it to the track.
     
     func addPoints()
     {

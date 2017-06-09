@@ -13,7 +13,8 @@ import CoreLocation
 
 class Trolley
 {
-//    let name: String?
+    //MARK:- Properties
+    let name: String = String()
     let thumbnail: UIImage?
     let identifier: Int
     var lastUpdated: Date
@@ -24,7 +25,7 @@ class Trolley
     
     
     
-    
+    //MARK:- Initialization
     required init(image: UIImage, id: Int, location: CLLocation) {
         self.thumbnail = image
         self.identifier = id
@@ -39,13 +40,18 @@ class Trolley
         self.lastUpdated = Date()
     }
     
+    
+    //MARK:- Methods
     func determineHeading()
     {
         
+        //Few ideas:
+        //Use direct opposite/extend the line forward from the locations array.
+        //Use locations array to predict direction, look at trolley track to draw an arrow parallel to that.
         
     }
     
-    
+    //MARK:- Operators
     static func == (left: Trolley, right: Trolley) -> Bool
     {
         if(left.identifier == right.identifier) {

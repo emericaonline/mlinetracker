@@ -15,22 +15,16 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var path: [CLLocationCoordinate2D] = [CLLocationCoordinate2D]()
-    
     var locationManager: CLLocationManager!
-    
-    var polylines: MKPolyline = MKPolyline()
-    
-    var lastLocation: CLLocation?
-    
-    var trolleys: [Trolley]?
-    
-    var headingLine: MKPolyline?
     
     let pollServerInterval = 5.0
     
+    var trolleys: [Trolley]?
     let trolleyTrack: Track = Track()
-
+    
+    var polylines: MKPolyline = MKPolyline()
+    var headingLine: MKPolyline?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,22 +37,27 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         
         self.refreshData()
         Timer.scheduledTimer(timeInterval: pollServerInterval, target: self, selector: #selector(self.refreshData), userInfo: nil, repeats: true)
+        
         self.mapView.delegate = self
         mapView.showsUserLocation = true
+        
         self.drawLines()
-        
-        
         self.centerSelf()
     }
     
     
-    func drawLines()
+    
+    func centerSelf()
     {
-        self.polylines = MKPolyline(coordinates: &trolleyTrack.trackPoints, count: trolleyTrack.trackPoints.count)
-        print(polylines)
+        #if arch(i386) || arch(x86_64)
+            let mapCenter: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 32.807928, longitude: -96.796825)
+        #else
+            let mapCenter: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
+        #endif
         
-        self.mapView.add(self.polylines)
-
+        let regionRadius: CLLocationDistance = 2000
+        let mapMKCenter = MKCoordinateRegionMakeWithDistance(mapCenter, regionRadius, regionRadius)
+        self.mapView.setRegion(mapMKCenter, animated: true)
     }
    
     //Add trolley stops presumably give it, its own class.
@@ -104,6 +103,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         drawHeading()
     }
    
+    
+    
+    //MARK:- Map Drawing
+    
     func placeTrolleys()
     {
         for trolley in trolleys!
@@ -116,6 +119,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
             
         }
     }
+    
     
     //TODO: Draw an actual heading, via an arrow possibly or the updated trolley graphic.
     //Currently shows a trail rather than a heading.
@@ -144,20 +148,14 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         }
     }
     
-    
-    func centerSelf()
+    func drawLines()
     {
-        #if arch(i386) || arch(x86_64)
-            let mapCenter: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 32.807928, longitude: -96.796825)
-        #else
-            let mapCenter: CLLocationCoordinate2D = (self.locationManager.location?.coordinate)!
-        #endif
+        self.polylines = MKPolyline(coordinates: &trolleyTrack.trackPoints, count: trolleyTrack.trackPoints.count)
+        print(polylines)
         
-        let regionRadius: CLLocationDistance = 2000
-        let mapMKCenter = MKCoordinateRegionMakeWithDistance(mapCenter, regionRadius, regionRadius)
-        self.mapView.setRegion(mapMKCenter, animated: true)
+        self.mapView.add(self.polylines)
+
     }
-    
     
     func placeAnnotation(lat: Double, long: Double)
     {
@@ -168,6 +166,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
             self.mapView.addAnnotation(annote)
         }
     }
+   
     
     func placeAnnotation(location: CLLocation)
     {
@@ -179,7 +178,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         }
         
     }
+   
     
+    //MARK:- Network code --- move this out of view controller.
     func refreshData()
     {
         print("Data refreshing")
@@ -237,7 +238,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     }
     
     
-    
+    //MARK:- Location
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!)
     {
         let locationArray = locations as NSArray

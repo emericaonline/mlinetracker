@@ -27,7 +27,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     
     var headingLine: MKPolyline?
     
-    let pollServerInterval = 3.0
+    let pollServerInterval = 5.0
     
     let trolleyTrack: Track = Track()
 
@@ -45,7 +45,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         Timer.scheduledTimer(timeInterval: pollServerInterval, target: self, selector: #selector(self.refreshData), userInfo: nil, repeats: true)
         self.mapView.delegate = self
         mapView.showsUserLocation = true
-//        self.addPoints()
         self.drawLines()
         
         
@@ -55,7 +54,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     
     func drawLines()
     {
-//        self.polylines = MKPolyline(coordinates: &path, count: path.count)
         self.polylines = MKPolyline(coordinates: &trolleyTrack.trackPoints, count: trolleyTrack.trackPoints.count)
         print(polylines)
         
@@ -63,7 +61,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
 
     }
    
-    
+    //Add trolley stops presumably give it, its own class.
     func addStops()
     {
         
@@ -75,6 +73,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     //LETS KEEP TRACK OF THEIR ENTIRE PATH???? OR JUST A LIST OF POINTS
     //TODO: Clear old trolleys from memory.
     //TODO: Use a map to find and compare trolleys based on ID number.
+    //Issue regarding drawing both trolleys when they are at their night rest stop with the fi statement
+    //line 88
     
     func updateTrolleys(trolleyList: [Trolley])
     {
@@ -86,11 +86,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
                 {
                     if(trolley == trolleysInMember)
                     {
-                        if(!(trolleysInMember.currentLocation == trolley.currentLocation)){
+//                        if(!(trolleysInMember.currentLocation == trolley.currentLocation)){
                             trolleysInMember.lastUpdated = Date()
                             trolleysInMember.locations.append(trolley.currentLocation)
                             trolleysInMember.currentLocation = trolley.currentLocation
-                        }
+//                        }
                     }
                 }
             }
@@ -276,75 +276,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         }
         return MKOverlayRenderer()
     }
-    
-    
-    //These points make up the track.
-    func addPoints()
-    {
-        //TODO: Move this to info.plist or somewhere else suitable.
-        self.path.append(CLLocationCoordinate2D(latitude: CLLocationDegrees(32.801866), longitude: CLLocationDegrees(-96.800921)))
-        self.path.append(CLLocationCoordinate2D(latitude: CLLocationDegrees(32.807605), longitude: CLLocationDegrees(-96.797218)))
-        self.path.append(CLLocationCoordinate2D(latitude: CLLocationDegrees(32.807928), longitude: CLLocationDegrees(-96.796825)))
-        self.path.append(CLLocationCoordinate2D(latitude: CLLocationDegrees(32.80555), longitude: CLLocationDegrees(-96.79408700000002)))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.80558, longitude: -96.79405200000001))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.807965, longitude: -96.796784))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.808701, longitude: -96.79587))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.809536, longitude: -96.796814))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.807955, longitude: -96.798829))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.8071, longitude: -96.799828))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.806619, longitude: -96.799275))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.805047, longitude: -96.80029))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.803497, longitude: -96.801327))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.802399, longitude: -96.802053))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.801826, longitude: -96.802391))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.800725, longitude: -96.801144))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.800448, longitude: -96.80093))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.800163, longitude: -96.800837))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.799744, longitude: -96.800919))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.797646, longitude: -96.801428))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.795088, longitude: -96.802172))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.792926, longitude: -96.80288800000001))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.791663, longitude: -96.803337))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.789312, longitude: -96.804016))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.788596, longitude: -96.80315200000001))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.788087, longitude: -96.802504))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.78612, longitude: -96.800205))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.784398, longitude: -96.798264))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.784347, longitude: -96.798114))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.784379, longitude: -96.797961))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.784431, longitude: -96.797831))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.784518, longitude: -96.797697))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.785051, longitude: -96.797057))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.785577, longitude: -96.79669500000001))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.78566200000001, longitude: -96.796515))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.785738, longitude: -96.796344))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.785849, longitude: -96.79626300000001))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.785965, longitude: -96.796281))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.786035, longitude: -96.796364))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.786139, longitude: -96.796555))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.786868, longitude: -96.797337))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.787655, longitude: -96.798363))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.787863, longitude: -96.798653))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.788047000000006, longitude: -96.79893900000002))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.788266, longitude: -96.799532))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.788431, longitude: -96.799783))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.788918, longitude: -96.800427))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.789342, longitude: -96.800946))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.789875, longitude: -96.80152))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.791487, longitude: -96.803248))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.791631, longitude: -96.803289))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.792908, longitude: -96.802836))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.79508, longitude: -96.802138))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.79764, longitude: -96.801398))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.799732, longitude: -96.800865))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.80024, longitude: -96.800755))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.801715, longitude: -96.800966))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.801808, longitude: -96.80095))
-        self.path.append(CLLocationCoordinate2D(latitude: 32.801866, longitude: -96.800921))
-        
-        
-    }
-
     
 }
 

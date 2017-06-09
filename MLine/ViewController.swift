@@ -29,7 +29,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     
     let pollServerInterval = 3.0
     
-    
+    let trolleyTrack: Track = Track()
 
 
     override func viewDidLoad() {
@@ -45,8 +45,9 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         Timer.scheduledTimer(timeInterval: pollServerInterval, target: self, selector: #selector(self.refreshData), userInfo: nil, repeats: true)
         self.mapView.delegate = self
         mapView.showsUserLocation = true
-        self.addPoints()
+//        self.addPoints()
         self.drawLines()
+        
         
         self.centerSelf()
     }
@@ -54,7 +55,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     
     func drawLines()
     {
-        self.polylines = MKPolyline(coordinates: &path, count: path.count)
+//        self.polylines = MKPolyline(coordinates: &path, count: path.count)
+        self.polylines = MKPolyline(coordinates: &trolleyTrack.trackPoints, count: trolleyTrack.trackPoints.count)
         print(polylines)
         
         self.mapView.add(self.polylines)
@@ -213,6 +215,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
                            
                                 let location = CLLocation(latitude: lats as! Double, longitude: longs as! Double)
                                 let trolley = Trolley(id: Int(item.key)!, location: location)
+                                
+                                print(location)
                                 
                                 trolleyList.append(trolley)
                             }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C32DB971EEA341100CEF356 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C32DB961EEA341100CEF356 /* Track.swift */; };
 		1C8A54951DB2CE8100A795FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8A54941DB2CE8100A795FB /* AppDelegate.swift */; };
 		1C8A54971DB2CE8100A795FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8A54961DB2CE8100A795FB /* ViewController.swift */; };
 		1C8A549A1DB2CE8100A795FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8A54981DB2CE8100A795FB /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C32DB961EEA341100CEF356 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		1C8A54911DB2CE8000A795FB /* MLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8A54941DB2CE8100A795FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8A54961DB2CE8100A795FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				1CD436681EE4AAA50040B50E /* Trolley.swift */,
+				1C32DB961EEA341100CEF356 /* Track.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				1C8A54971DB2CE8100A795FB /* ViewController.swift in Sources */,
 				1CD436691EE4AAA50040B50E /* Trolley.swift in Sources */,
 				1C8A54951DB2CE8100A795FB /* AppDelegate.swift in Sources */,
+				1C32DB971EEA341100CEF356 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,7 @@ class Trolley
     
     
     
+    
     required init(image: UIImage, id: Int, location: CLLocation) {
         self.thumbnail = image
         self.identifier = id
@@ -36,6 +37,12 @@ class Trolley
         self.currentLocation = location
         self.thumbnail = UIImage()
         self.lastUpdated = Date()
+    }
+    
+    func determineHeading()
+    {
+        
+        
     }
     
     
